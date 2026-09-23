@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-maroon-darkest: #3f0f1a;
+    --color-maroon-dark: #4c1320;
+    --color-maroon-base: #641b2c;
+    --color-maroon-surface: #782235;
+    --color-maroon-border: #942e45;
+    --color-gold-base: #d4af37;
+    --color-gold-light: #f3e5ab;
+    --color-gold-muted: #8c7333;
+    --color-electric-blue: #0284c7;
+    --color-cyan-water: #0891b2;
+    --color-cream-prose: #fcf9f5;
+    --color-cream-muted: #e2cbb0;
+  }
+
+  body {
+    background-color: var(--color-maroon-dark);
+    color: var(--color-cream-prose);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #d4af37;
+    selection-color: #3f0f1a;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-serif-lux {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #3a0d17;
+}
+::-webkit-scrollbar-thumb {
+  background: #782235;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Subtle luxury utilities */
+.luxury-glass {
+  background: rgba(92, 24, 40, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.24);
+}
+
+.luxury-glass-subtle {
+  background: rgba(76, 19, 32, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.luxury-card {
+  background: linear-gradient(135deg, rgba(100, 27, 44, 0.88) 0%, rgba(70, 17, 30, 0.94) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+.luxury-card:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff7d6 0%, #d4af37 50%, #aa820a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.electric-gradient-text {
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.water-gradient-text {
+  background: linear-gradient(135deg, #ecfeff 0%, #22d3ee 50%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Metallic hairline divider */
+.gold-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.4) 50%, transparent 100%);
+}
+
+@keyframes shimmer-ltr {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer-ltr {
+  animation: shimmer-ltr 3s infinite linear;
+}
+
